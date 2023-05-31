@@ -106,7 +106,7 @@ class Book{
 		}
 };
 
-/*int main(){
+  int main(){
 	//To do: Create a book object named b1 with the default constructor
 	 Book b1;
 
@@ -175,5 +175,5 @@ class Book{
 	delete bl1;
 	return 0;
 
-}*/
+}
 
