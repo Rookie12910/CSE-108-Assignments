@@ -57,16 +57,21 @@ class Book{
 		}
 
 		//Write the setter functions here
-		void setter (int Isbn,char* Title,double Price)
+		void set_Title (char* Title)
 		{
 		    	delete title;
-		    	isbn = Isbn;
-			price = Price;
 			int len = strlen(Title);
 			title = new char[len+1];
 			strcpy(title,Title);
 		}
-
+		void set_Isbn(int Isbn)
+		{
+			isbn = Isbn;
+		}
+		void set_Price(double price)
+		{
+			price = Price;
+		}
 
 		//Write the getter functions here
 		Book getter ()
