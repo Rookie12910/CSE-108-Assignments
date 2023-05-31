@@ -14,7 +14,7 @@ using namespace std;
 class Book{
 
 	public:
-    int isbn;
+    	int isbn;
 	char* title;
 	double price;
 		//Constructor functions
@@ -59,8 +59,8 @@ class Book{
 		//Write the setter functions here
 		void setter (int Isbn,char* Title,double Price)
 		{
-		    delete title;
-		    isbn = Isbn;
+		    	delete title;
+		    	isbn = Isbn;
 			price = Price;
 			int len = strlen(Title);
 			title = new char[len+1];
@@ -77,7 +77,7 @@ class Book{
 		    int len = strlen(title);
 		    ob.title = new char[len+1];
 		    strcpy(ob.title,title);
-            return ob;
+            	    return ob;
 		}
 
 		//Service functions
@@ -89,9 +89,9 @@ class Book{
 		int isTheSameBook(Book b){
 			//Write your code here
 			if(isbn==b.isbn)
-                return 1;
-            else
-                return 0;
+               		 return 1;
+            		else
+                	 return 0;
 		}
 
 		Book generateNewEdition(int Isbn, int Price){
