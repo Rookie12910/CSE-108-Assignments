@@ -50,7 +50,6 @@ public:
         int len = strlen(book.title);
         title = new char[len+1];
         strcpy(title,book.title);
-
     }
 
     //Destructor function
@@ -60,7 +59,14 @@ public:
         //Write your code here
         delete title;
     }
-
+     Book operator = (Book obj)
+    {
+        title = new char[strlen(obj.get_title())+1];
+        isbn = obj.get_isbn();
+        strcpy(title,obj.get_title());
+        price = obj.get_price();
+        return *this;
+    }
     //Write the setter functions here
     void set_title (char* Title)
     {
@@ -119,9 +125,10 @@ public:
         strcpy(ob.title,title);
         return ob;
     }
+
 };
 
-int main()
+/*int main()
 {
     //To do: Create a book object named b1 with the default constructor
     Book b1;
@@ -194,5 +201,5 @@ int main()
 
     return 0;
 
-}
+}*/
 
